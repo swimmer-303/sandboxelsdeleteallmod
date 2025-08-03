@@ -1,6 +1,4 @@
-if (typeof runAfterLoad === "undefined") {
-    runAfterLoad = [];
-}
+// delete_selected_element.js
 
 runAfterLoad.push(() => {
     const button = document.createElement("button");
@@ -12,7 +10,7 @@ runAfterLoad.push(() => {
 
         for (let x = 0; x < width; x++) {
             for (let y = 0; y < height; y++) {
-                let p = pixelMap[x][y];
+                const p = pixelMap[x][y];
                 if (p && p.element === selected) {
                     deletePixel(x, y);
                     deleted++;
